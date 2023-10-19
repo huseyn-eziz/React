@@ -1,0 +1,26 @@
+{
+	"useState": {
+	  "scope": "javascript,typescript,javascriptreact,typescriptreact",
+	  "prefix": "usestat",
+	  "body": [
+		"const [ ${1:data}, set${1/(.*)/${1:/capitalize}/} ] = useState$2($3)"
+	  ],
+	  "description": "To create new useState hook"
+	},
+	"useParams hook": {
+	  "scope": "javascript,typescript,javascriptreact,typescriptreact",
+	  "prefix": "useparam",
+	  "body": [
+		"const {${1:id}} = useParams()"
+	  ],
+	  "description": "To create new useParams hook"
+	},
+	"useEffect": {
+		"scope": "javascript,typescript,javascriptreact,typescriptreact",
+		"prefix": "usef",
+		"body": [
+		  "useEffect(() => { $1 },$2[]);"
+		],
+		"description": "To create new useEffect hook"
+	  }
+  }
