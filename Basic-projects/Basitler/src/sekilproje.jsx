@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import './App.css'
 
-function App() {
+function Sekilproje() {
 const [ click, setClick ] = useState("./images/qarisiq.jpeg")
 
 const srcs = [ "./images/qarisiq.jpeg",
@@ -11,7 +11,7 @@ const srcs = [ "./images/qarisiq.jpeg",
 
 
   return (
-    <body>
+    <>
       <div className='img'>
         <div className="imgesas">
         <img src={click} alt="" />
@@ -23,8 +23,8 @@ const srcs = [ "./images/qarisiq.jpeg",
 
         </div>
       </div>
-    </body>
+    </>
   )
 }
 
-export default App
+export default Sekilproje

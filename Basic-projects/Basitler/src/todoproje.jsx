@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-function App() {
+function Todoproje() {
   const [todo, setTodo] = useState('')
   const [todos, setTodos] = useState([])
 
@@ -13,12 +13,10 @@ function App() {
       />
       <button onClick={() => todo.trim() !== '' && setTodos([...todos, todo], setTodo(''))}> ButtonAdd </button>
 
-      {todos.map((todolar) => {
+      {todos.map((todolar,index) => {
         return (
 
-          <ul>
-            <li> {todolar} </li>
-          </ul>
+            <li key={index} > {todolar} </li>
 
         )
 
@@ -28,4 +26,4 @@ function App() {
   )
 }
 
-export default App
+export default Todoproje
