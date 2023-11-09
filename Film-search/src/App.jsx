@@ -24,11 +24,14 @@ function App() {
   return (
     <div className="flex h-full w-full items-center justify-center flex-col">
 
-      <Search value={search} onChange={(e) => setSearch(e.target.value)} onSubmit={handleSubmit} />
-      {kinolar.length > 0 ? <div>
-        {kinolar.map((movie,key) =>  <Movie {...movie}/> )}
+      <Search value={search}
+        onChange={(e) => setSearch(e.target.value)}
+        onSubmit={handleSubmit}
+      />
+      {kinolar.length > 0 ? <div className="grid grid-cols-1 lg:grid-cols-6 md:grid-cols-4 sm:grid-cols-2 gap-4">
+         { kinolar.map( (movie, key) => <Movie key={key} {...movie} /> ) }
 
-      </div> : <p className="text-white py-6 text-lg">Movie not found!</p> }
+      </div> : <p className="text-white py-6 text-lg "> Movie not found! </p>}
 
     </div>
   )

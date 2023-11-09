@@ -3,7 +3,7 @@ import searchbutton from '../assets/bx-search.svg'
 
 const Search = ({value,onChange,onSubmit}) => {
     return (
-        <form className='w-full max-w-lg  relative' onSubmit={onSubmit}>
+        <form className='w-full max-w-lg py-10 relative' onSubmit={onSubmit}>
             <input 
             onChange={onChange}
             value={value}
